@@ -1,0 +1,68 @@
+1.) 
+max(X,Y,Z):- X>Y, Z is X.
+max(X,Y,Z):- X=<Y, Z is Y, write(Z).
+
+2.)
+max(X,Y,U,Z):- max(X,Y,Z).
+max(X,Y,Z):- X>Y, Z is X.
+max(X,Y,Z):- X=<Y, Z is Y, write(Z).
+
+3.)
+fact(0,1).
+fact(N,X):-  N1 is N-1, fact(N1,X1), X is X1*N. 
+
+4.)
+fact1(N,X):- fact1(0,1,N,X). 
+fact1(N,X,N,X):-!.
+fact1(I,F,N,X):- I1 is I+1,  F1 is F*I1, fact1(I1,F1,N,X).
+
+5.)
+fib(1,1):-!.
+fib(2,1):-!.
+fib(N,X):- N1 is N-1, fib(N1,X1), N2=N-2, fib(N2,X2), X=X1+X2.
+
+6.)
+fib(N,X):-fib(N,1,1,X).
+fib(1,F2,_,F2):-!.
+fib(N,F1,F2,X):-N1 is N-1,NF2 is F1 + F2, fib(N1,F2,NF2,X).
+
+
+7.)
+sum(N,N) :- N>=0, N<10.
+sum(N,X) :- N>=10,N1 is N div 10, N2 is N mod 10, sum(N1,X1), X is N2+X1.
+
+
+8.)
+sum(N,S):-sum(N,0,S).
+sum(0,S,S):-!.
+sum(A,Sum,S):- Am is A mod 10, Ad is A div 10, Sum1 is Sum + Am,
+sum(Ad,Sum1,S).
+
+
+9.)
+min(N,N) :- N>=0, N<10.
+min(N,X) :- N1 is N div 10, N2 is N mod 10, min(N1,X1),N2=<X1, X is N2,!.
+min(N,X) :- N1 is N div 10, N2 is N mod 10, min(N1,X1),N2>X1, X is X1.
+
+10.)
+min(N,S):-min(N,N,S).
+min(0,N,N):-!.
+min(A,Min,S):- Am is A mod 10, Ad is A div 10, Min=<Am ,Min1 is Min ,
+min(Ad,Min1,S).
+min(A,Min,S):- Am is A mod 10, Ad is A div 10, Min>Am ,Min1 is Am ,
+min(Ad,Min1,S).
+
+11.)
+umn(N,N) :- N < 10,not(N=5), !.
+umn(5,1):-!.
+umn(N,K) :- N1 is N mod 10, N2 is N div 10, umn(N2,K1),not(N1=5),not(K1=5), K is K1*N1.
+umn(N,K) :- N1 is N mod 10, N2 is N div 10, umn(N2,K1),(N1=5),not(K1=5), K is K1*1.
+umn(N,K) :- N1 is N mod 10, N2 is N div 10, umn(N2,K1),not(N1=5),(K1=5), K is 1*N1.
+
+12.)
+
+nod(A,A,A).
+nod(0,B,B).
+nod(A,0,A).
+nod(A,B,NOD):-A>B, C is A mod B, nod(C,B,N),NOD is N.
+nod(A,B,NOD):-A<B, C is B mod A, nod(A,C,N),NOD is N.

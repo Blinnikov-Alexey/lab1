@@ -1,0 +1,54 @@
+man(james).
+man(john).
+man(robert).
+man(michael).
+man(willian).
+man(stephan). 
+
+woman(mary).
+woman(patricia).
+woman(jennifer).
+woman(elizabeth).
+woman(julia).
+
+father(robert,james).
+father(robert,jennifer).
+father(michael,mary).
+father(michael,stephan).
+father(james,john).
+father(willian,julia).
+
+mother(patricia,james).
+mother(patricia, jennifer).
+mother(elizabeth, mary).
+mother(elizabeth, stephan).
+mother(mary, john).
+mother(jennifer,julia).
+
+parent(X,Y):-father(X,Y);mother(X,Y).
+vnuk(X,Z):-parent(Y,X), parent(Z,Y), man(X).
+vnuchka(X,Z):-parent(Y,X), parent(Z,Y), woman(X).
+sister(X,Y):-parent(Z,X), parent(Z,Y), dif(X,Y).
+brother(X,Y):-parent(Z,X), parent(Z,Y), dif(X,Y), man(X).
+brothers(X):- brother(X,Y), write(Y).
+children(X):- parent(X,Y),write(Y).
+mother(X):- mother(Y,X), write(Y).
+daughter(X,Y):- parent(Y,X), woman(X).
+daughter(X):- daughter(Y,X), write(Y).
+brother(X):- brother(Y,X), write(Y).
+wife(X,Y):- mother(X,Z), father(Y,Z).
+wife(X):- wife(Y,X), write(Y).
+husband(X,Y):-father(X,Z), mother(Y,Z).
+b_s(X,Y):-brother(X,Y);sister(X,Y).
+b_s(X):-b_s(X,Y), write(Y).
+grand_pa(X,Y):- father(X,Z),parent(Z,Y).
+grand_pas(X):-grand_pa(Y,X), write(Y).
+grand_ma(X,Y):- mother(X,Z),parent(Z,Y).
+grand_mas(X):-grand_ma(Y,X), write(Y).
+grand_pa_and_son(X,Y):-grand_pa(X,Y);grand_pa(Y,X), man(X), man(Y).
+grand_ma_and_da(X,Y):-grand_ma(X,Y);grand_ma(Y,X), woman(X), woman(Y).
+uncle(X,Y):-parent(Z,Y), brother(X,Z).
+uncle(X,Y):-husband(X,Z), sister(Z,P), parent(P,Y).
+uncle(X):-uncle(Y,X), write(Y).
+plem(X,Y):-uncle(Y,X) , man(X).
+plem(X):-plem(Y,X), write(Y).

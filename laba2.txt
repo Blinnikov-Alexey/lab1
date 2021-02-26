@@ -1,0 +1,241 @@
+nike(airmax,1).
+nike(jordan,1).
+nike(pegasus,1).
+nike(react,1).
+nike(mercurial,1).
+nike(yezzy,0).
+nike(superstar,0).
+nike(gazelle,0).
+nike(flux,0).
+nike(samba,0).
+nike(classic,0).
+nike(club,0).
+nike(zig,0).
+nike(instapump,0).
+nike(nano,0).  
+nike(force,1).
+nike(lebron,1).
+nike(dunk,1).
+nike(rhyton,0).
+nike(archlight,0).
+
+adidas(airmax,0).
+adidas(jordan,0).
+adidas(pegasus,0).
+adidas(react,0).
+adidas(mercurial,0).
+adidas(yezzy,1).
+adidas(superstar,1).
+adidas(gazelle,1).
+adidas(flux,1).
+adidas(samba,1).
+adidas(classic,0).
+adidas(club,0).
+adidas(zig,0).
+adidas(instapump,0).
+adidas(nano,0).
+adidas(force,0).
+adidas(lebron,0).
+adidas(dunk,0).
+adidas(rhyton,0).
+adidas(archlight,0).
+
+reebok(airmax,0).
+reebok(jordan,0).
+reebok(pegasus,0).
+reebok(react,0).
+reebok(mercurial,0).
+reebok(yezzy,0).
+reebok(superstar,0).
+reebok(gazelle,0).
+reebok(flux,0).
+reebok(samba,0).
+reebok(classic,1).
+reebok(club,1).
+reebok(zig,1).
+reebok(instapump,1).
+reebok(nano,1).
+reebok(force,0).
+reebok(lebron,0).
+reebok(dunk,0).
+reebok(rhyton,0).
+reebok(archlight,0).
+
+popularnow(airmax,0).
+popularnow(jordan,1).
+popularnow(pegasus,0).
+popularnow(react,1).
+popularnow(mercurial,0).
+popularnow(yezzy,1).
+popularnow(superstar,0).
+popularnow(gazelle,0).
+popularnow(flux,0).
+popularnow(samba,0).
+popularnow(classic,1).
+popularnow(club,0).
+popularnow(zig,0).
+popularnow(instapump,0).
+popularnow(nano,0).
+popularnow(force,1).
+popularnow(lebron,0).
+popularnow(dunk,1).
+popularnow(rhyton,1).
+popularnow(archlight,0).
+
+popularaer(airmax,1).
+popularear(jordan,2).
+popularear(pegasus,0).
+popularear(react,0).
+popularear(mercurial,0).
+popularear(yezzy,2).
+popularear(superstar,1).
+popularear(gazelle,1).
+popularear(flux,1).
+popularear(samba,1).
+popularear(classic,2).
+popularear(club,1).
+popularear(zig,1).
+popularear(instapump,1).
+popularear(nano,0).
+popularear(force,2).
+popularear(lebron,1).  
+popularear(dunk,0).
+popularear(rhyton,0).
+popularear(archlight,0).
+
+sport(airmax,1).
+sport(jordan,1).
+sport(pegasus,1).
+sport(react,1).
+sport(mercurial,1).
+sport(yezzy,0).
+sport(superstar,0).
+sport(gazelle,0).
+sport(flux,1).
+sport(samba,0).
+sport(classic,0).
+sport(club,0).
+sport(zig,1).
+sport(instapump,0).
+sport(nano,1).
+sport(force,0).
+sport(lebron,1).
+sport(dunk,0).
+sport(rhyton,0).
+sport(archlight,0).
+
+fashion(airmax,0).
+fashion(jordan,1).
+fashion(pegasus,0).
+fashion(react,1).
+fashion(mercurial,0).
+fashion(yezzy,1).
+fashion(superstar,1).
+fashion(gazelle,0).
+fashion(flux,1).
+fashion(samba,0).
+fashion(classic,0).
+fashion(club,0).
+fashion(zig,0).
+fashion(instapump,1).
+fashion(nano,0).
+fashion(force,0).
+fashion(lebron,0).
+fashion(dunk,1).
+fashion(rhyton,1).
+fashion(archlight,1).
+
+ked(airmax,0).
+ked(jordan,0).
+ked(pegasus,0).
+ked(react,0).
+ked(mercurial,0).
+ked(yezzy,0).
+ked(superstar,1).
+ked(gazelle,1).
+ked(flux,0).
+ked(samba,1).
+ked(classic,0).
+ked(club,1).
+ked(zig,0).
+ked(instapump,0).
+ked(nano,0).
+ked(force,0).
+ked(lebron,0).
+ked(dunk,1).
+ked(rhyton,0).
+ked(archlight,0).
+
+luxe(airmax,1).
+luxe(jordan,1).
+luxe(pegasus,0).
+luxe(react,0).
+luxe(mercurial,0).
+luxe(yeezy,1).
+luxe(superstar,0).
+luxe(gazelle,0).
+luxe(flux,0).
+luxe(samba,0).
+luxe(classic,0).
+luxe(club,0).
+luxe(zig,0).
+luxe(instapump,0).
+luxe(nano,0).
+luxe(force,1).
+luxe(lebron,0).
+luxe(dunk,1).
+luxe(rhyton,1).
+luxe(archlight,1).
+
+question1(X1):-	write("These sneakers brand Nike?"),nl,
+				write("1. Yes"),nl,
+				write("0. NO"),nl,
+				read(X1).
+
+question2(X2):-	write("These sneakers brand Adidas?"),nl,
+				write("1. Yes"),nl,
+				write("0. NO"),nl,
+				read(X2).
+
+question3(X3):-	write("These sneakers brand Reebok?"),nl,
+				write("1. Yes"),nl,
+				write("0. NO"),nl,
+				read(X3).
+
+question4(X4):-	write("Are they popular now?"),nl,
+				write("1. Yes"),nl,
+				write("0. NO"),nl,
+				read(X4).
+
+question5(X5):-	write("Were these sneakers popular before?"),nl,
+				write("2. Yes,they are always popular"),nl,
+				write("1. Yes"),nl,
+				write("0. NO"),nl,
+				read(X5).
+
+question6(X6):-	write("Are these sneakers athletic?"),nl,
+				write("1. Yes"),nl,
+				write("0. NO"),nl,
+				read(X6).
+
+question7(X7):-	write("Are these sneakers worn at fashion shows?"),nl,
+				write("1. Yes"),nl,
+				write("0. NO"),nl,
+				read(X7).
+
+question8(X8):-	write("Are the like gumshoes?"),nl,
+				write("1. Yes"),nl,
+				write("0. NO"),nl,
+				read(X8).
+
+
+question9(X9):-	write("Are there any expensive models of such sneakers?"),nl,
+				write("1. Yes"),nl,
+				write("0. NO"),nl,
+				read(X9).
+
+pr:-	question1(X1),question2(X2),question3(X3),question4(X4),
+		question5(X5),question6(X6),question7(X7),question8(X8),question9(X9),
+		nike(X,X1),adidas(X,X2),reebok(X,X3),popularnow(X,X4),
+		popularear(X,X5),sport(X,X6),fashion(X,X7) , ked(X,X8), luxe(X,X9),
+		write(X).
